@@ -44,6 +44,7 @@ print("Type of car", type(car_mustang))
 print(isinstance(bus_40, Bus))
 print(isinstance(bus_40, Car))
 
+
 vehicles = [bus_40, car_mustang]
 for v in vehicles:
     v.drive_to(destination="Kant")
