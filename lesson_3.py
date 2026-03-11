@@ -79,4 +79,16 @@ print(car_mustang.max_speed)
 car_mustang.max_speed = -100
 print(car_mustang.max_speed)
 
+class Animal:
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
+
+    def get_name(self):
+        return self.__name
+
+    def set_name(self, new_name):
+        ...
+
+
 
