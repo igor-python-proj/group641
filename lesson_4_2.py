@@ -18,16 +18,23 @@ class User:
 
     @classmethod
     def create_user(cls, name, phone_number):
-        if not phone_number.isdigit():
+        if User.validate_phone_number(phone_number):
+            # создаем объект класса User
+            new_user = cls(name=name, phone_number=phone_number)
+            return new_user
+        else:
             raise ValueError(f"неправильный формат телефона {phone_number}")
-        new_user = cls(name, phone_number)
-        return new_user
 
+    @staticmethod
+    def validate_phone_number(phone_number):
+        if not phone_number.isdigit():
+            return False
+        return True
 
-user_1 = User("Игорь", "996555000001")
+user_1 = User(name="Игорь", phone_number="996555000001")
 user_2 = User("Курманбек", "996555000002")
 print(user_1.name)
-print(user_2.name)
+print(user_2.get_name())
 print(user_1.password, user_2.password)
 print("Кол-во пользователей", User.user_count)
 User.user_count += 1
