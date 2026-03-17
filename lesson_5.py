@@ -27,10 +27,15 @@ class Money:
         ### one line ###
         # return self.amount > other.amount
 
+    # add - прибавлять(+)
     def __add__(self, other):
         new_amount = self.amount + other.amount
         new_money = Money(new_amount, other.currency)
         return new_money
+
+    # subtract - вычитать(-)
+    def __sub__(self, other):
+        ...
 
 money_igor = Money(100)
 money_artur = Money(200)
