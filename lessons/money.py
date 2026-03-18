@@ -37,11 +37,16 @@ class Money:
     def __sub__(self, other):
         ...
 
-money_igor = Money(100)
-money_artur = Money(200)
-print(money_igor)
-print(money_igor == money_artur)
-print(money_artur > money_igor)
-total_money = money_igor + money_artur
-print(total_money)
 
+def print_money():
+    ...
+
+
+if __name__ == '__main__':
+    money_igor = Money(100)
+    money_artur = Money(200)
+    print(money_igor)
+    print(money_igor == money_artur)
+    print(money_artur > money_igor)
+    total_money = money_igor + money_artur
+    print(total_money)
