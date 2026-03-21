@@ -17,6 +17,7 @@ class Duck(Flying, Swimming):
         super().move()
         print("утка плавает и летает")
 
+
 duck = Duck()
 duck.move()
 # MRO - method resolution order
